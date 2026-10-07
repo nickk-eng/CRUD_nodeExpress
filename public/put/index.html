@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Editar | CRUD</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Cadastro de Pessoas</h1>
+      <p>CRUD com JSON Server</p>
+      <nav>
+        <a href="/post/">Cadastrar</a><a href="/get/">Consultar</a
+        ><a class="active" href="/put/">Editar</a><a href="/delete/">Excluir</a>
+      </nav>
+    </header>
+    <main>
+      <section class="card search-card">
+        <h2>Localizar para editar</h2>
+        <p class="hint">Digite o CPF e carregue os dados do cadastro.</p>
+        <div class="toolbar">
+          <label
+            >CPF<input
+              id="cpf-search"
+              maxlength="14"
+              inputmode="numeric" /></label
+          ><button id="search">Buscar cadastro</button>
+        </div>
+      </section>
+      <section class="card" id="edit-card" hidden>
+        <h2>Atualizar cadastro</h2>
+        <form id="person-form">
+          <div class="form-grid">
+            <label
+              >CPF<input
+                name="cpf"
+                required
+                maxlength="14"
+                inputmode="numeric" /></label
+            ><label>Nome<input name="nome" required /></label
+            ><label>Sobrenome<input name="sobrenome" required /></label
+            ><label>E-mail<input name="email" type="email" required /></label
+            ><label
+              >Idade<input
+                name="idade"
+                type="number"
+                min="0"
+                max="130"
+                required /></label
+            ><label>Telefone<input name="telefone" required /></label
+            ><label>Rua<input name="rua" required /></label
+            ><label>Bairro<input name="bairro" required /></label
+            ><label>Cidade<input name="cidade" required /></label
+            ><label>Estado<input name="estado" required maxlength="2" /></label
+            ><label>RG<input name="rg" required /></label>
+          </div>
+          <div class="actions">
+            <button type="submit">Salvar alterações</button
+            ><a class="button secondary" href="/get/">Voltar à consulta</a>
+          </div>
+        </form>
+      </section>
+      <div class="message" role="status"></div>
+    </main>
+    <script src="/shared.js"></script>
+    <script src="/put/script.js"></script>
+  </body>
+</html>

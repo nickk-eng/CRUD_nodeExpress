@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Excluir | CRUD</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Cadastro de Pessoas</h1>
+      <p>CRUD com JSON Server</p>
+      <nav>
+        <a href="/post/">Cadastrar</a><a href="/get/">Consultar</a
+        ><a href="/put/">Editar</a><a class="active" href="/delete/">Excluir</a>
+      </nav>
+    </header>
+    <main>
+      <section class="card search-card">
+        <h2>Excluir cadastro</h2>
+        <p class="hint">
+          Encontre o cadastro pelo CPF antes de confirmar a exclusão.
+        </p>
+        <div class="toolbar">
+          <label
+            >CPF<input
+              id="cpf-search"
+              maxlength="14"
+              inputmode="numeric" /></label
+          ><button id="search">Buscar cadastro</button>
+        </div>
+        <div id="person" hidden></div>
+        <div class="message" role="status"></div>
+      </section>
+    </main>
+    <script src="/shared.js"></script>
+    <script src="/delete/script.js"></script>
+  </body>
+</html>

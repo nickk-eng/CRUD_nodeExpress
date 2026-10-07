@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cadastrar | CRUD</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Cadastro de Pessoas</h1>
+      <p>CRUD com JSON Server</p>
+      <nav>
+        <a class="active" href="/post/">Cadastrar</a
+        ><a href="/get/">Consultar</a><a href="/put/">Editar</a
+        ><a href="/delete/">Excluir</a>
+      </nav>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Novo cadastro</h2>
+        <p class="hint">
+          Preencha os dados abaixo. O CPF é usado para localizar o registro nas
+          demais páginas.
+        </p>
+        <form id="person-form">
+          <div class="form-grid">
+            <label
+              >CPF<input
+                name="cpf"
+                required
+                maxlength="14"
+                inputmode="numeric" /></label
+            ><label>Nome<input name="nome" required /></label
+            ><label>Sobrenome<input name="sobrenome" required /></label
+            ><label>E-mail<input name="email" type="email" required /></label
+            ><label
+              >Idade<input
+                name="idade"
+                type="number"
+                min="0"
+                max="130"
+                required /></label
+            ><label>Telefone<input name="telefone" required /></label
+            ><label>Rua<input name="rua" required /></label
+            ><label>Bairro<input name="bairro" required /></label
+            ><label>Cidade<input name="cidade" required /></label
+            ><label
+              >Estado<input
+                name="estado"
+                required
+                maxlength="2"
+                placeholder="Ex.: SP" /></label
+            ><label>RG<input name="rg" required /></label>
+          </div>
+          <div class="actions">
+            <button type="submit">Cadastrar pessoa</button
+            ><a class="button secondary" href="/get/">Ver cadastros</a>
+          </div>
+        </form>
+        <div class="message" role="status"></div>
+      </section>
+    </main>
+    <script src="/shared.js"></script>
+    <script src="/post/script.js"></script>
+  </body>
+</html>
